@@ -1,0 +1,271 @@
+body {
+  background: url("https://wallpapercave.com/wp/wp3140069.jpg") no-repeat center
+    center fixed;
+  background-size: cover;
+  font-family: "Gabarito", sans-serif;
+  margin: 0;
+  /* Alterado 'margin: 20px;' para 'margin: 0;' para remover a margem padrão do body, permitindo um controle mais preciso do espaçamento. */
+  padding: 20px;
+  /* Adicionado padding ao body para criar um espaçamento interno, afastando o conteúdo das bordas da tela. */
+  min-height: 100vh;
+  /* Definido uma altura mínima de 100% da viewport para garantir que o fundo ocupe a tela inteira, mesmo com pouco conteúdo. */
+  display: flex;
+  /* Adicionado display flex para facilitar o alinhamento central do conteúdo na página. */
+  flex-direction: column;
+  /* Definido a direção dos itens flex como coluna, organizando o cabeçalho e o conteúdo principal verticalmente. */
+  align-items: center;
+  /* Alinha os itens horizontalmente ao centro dentro do body. */
+}
+
+header {
+  text-align: center;
+  /* Centraliza o conteúdo do cabeçalho (logo e título). */
+  margin-bottom: 20px;
+  /* Adicionado uma margem inferior para separar visualmente o cabeçalho do restante do conteúdo. */
+}
+
+.logo {
+  text-align: center;
+  /* Alterado 'text-align: end;' para 'text-align: center;' para centralizar a logo. */
+}
+
+.logo img {
+  width: 100%;
+  /* Alterado 'width: 40%;' para 'width: 100%;' para que a imagem ocupe a largura total de seu container pai. */
+  max-width: 200px;
+  /* Adicionado um 'max-width' para limitar o tamanho máximo da imagem, evitando que ela fique excessivamente grande em telas maiores. */
+}
+
+.titulo h1 {
+  color: white;
+  /* Mantida a cor branca para o título. */
+  font-size: 2.5em;
+  /* Ajustado o tamanho da fonte para o título principal, tornando-o mais proeminente. */
+  margin-top: 10px;
+  /* Adicionado uma margem superior para separar o título da logo. */
+}
+
+/* Caixa principal do jogo */
+.conteudo-jogo {
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 5px #ff1b7b;
+  margin: 0 auto;
+  /* Alterado 'margin: 30px;' para 'margin: 0 auto;' para centralizar o container do jogo horizontalmente. */
+  padding: 20px;
+  /* Mantido o padding interno. */
+  min-height: 50vh;
+  /* Alterado 'height: 50vh;' para 'min-height: 50vh;' para que a altura se adapte ao conteúdo, mas com um mínimo definido. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Adicionado 'align-items: center;' para centralizar o conteúdo verticalmente dentro da caixa do jogo. */
+  margin-top: 2rem;
+  width: 90%;
+  /* Adicionado uma largura responsiva (90%) para o container do jogo. */
+  max-width: 800px;
+  /* Definido uma largura máxima para o container do jogo, limitando seu tamanho em telas muito grandes. */
+  border-radius: 8px;
+  /* Adicionado bordas arredondadas para um visual mais suave e moderno. */
+}
+
+.conteudo-jogo:hover {
+  background: rgba(0, 0, 0, 0.85);
+  /* Ajustado a opacidade do fundo no hover para um contraste sutil e mais escuro. */
+  box-shadow: 0 0 10px #19caca;
+  /* Aumentado o efeito do box-shadow no hover para ser mais visível. */
+}
+
+/* Títulos e textos */
+h2,
+p {
+  color: white;
+  margin-bottom: 10px;
+  /* Adicionado uma pequena margem inferior para parágrafos e h2, melhorando o espaçamento entre eles. */
+}
+
+/* Estrutura do questionário */
+.questionario {
+  display: flex;
+  justify-content: space-between;
+  /* Alterado 'space-evenly' para 'space-between' para distribuir o espaço de forma mais uniforme entre os elementos filhos. */
+  flex-direction: column;
+  width: 100%;
+  /* Alterado 'width: 70%;' para 'width: 100%;' para que o questionário ocupe a largura total do seu container pai. */
+  max-width: 100%;
+  /* Mantido 'max-width: 100%;' para garantir que não ultrapasse o container. */
+}
+
+/* Área de conteúdo */
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Alterado 'space-evenly' para 'space-between' para melhor distribuição do espaço vertical. */
+  height: 100%;
+  gap: 20px;
+  padding-bottom: 20px;
+  /* Adicionado um padding-bottom para separar o conteúdo das respostas. */
+}
+
+/* Estilo da pergunta */
+.pergunta {
+  font-weight: 600;
+  color: white;
+  font-size: 1.3em;
+  /* Aumentado o tamanho da fonte da pergunta para maior legibilidade e destaque. */
+  text-align: center;
+  /* Centraliza o texto da pergunta. */
+}
+
+/* Progresso da pergunta */
+.progresso {
+  text-align: end;
+  font-size: 0.9em;
+  /* Ajustado o tamanho da fonte para o progresso, tornando-o menos proeminente. */
+  font-weight: 500;
+  color: #ccc;
+  /* Escurecido a cor para um contraste suave e menos chamativo. */
+}
+
+/* Área das respostas */
+.respostas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* Aumentado o gap entre as respostas para melhor espaçamento e facilitar o clique. */
+  margin-top: 20px;
+  /* Adicionado uma margem superior para separar as respostas da pergunta. */
+}
+
+/* Botões de resposta */
+.botao-resposta {
+  width: 100%;
+  height: 3rem;
+  /* Aumentado a altura do botão para melhor área de clique e toque. */
+  text-align: start;
+  padding: 10px;
+  /* Aumentado o padding para maior área de clique e melhor espaçamento do texto. */
+  border: 1px solid #ff1b7b;
+  /* Adicionado uma borda para os botões para melhor definição. */
+  border-radius: 5px;
+  /* Adicionado bordas arredondadas. */
+  cursor: pointer;
+  background: #500020;
+  color: white;
+  font-size: 1.1em;
+  /* Ajustado o tamanho da fonte. */
+  transition: all 0.3s ease;
+  /* Adicionado uma transição suave para todos os efeitos de hover, tornando a interação mais fluida. */
+}
+
+.botao-resposta:hover {
+  background: #28a745;
+  /* Alterado a cor de fundo no hover para um verde mais vibrante, indicando a seleção correta. */
+  font-weight: 700;
+  /* Aumentado o peso da fonte no hover. */
+  transform: translateY(-2px);
+  /* Adicionado um pequeno deslocamento vertical no hover para um efeito visual sutil. */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  /* Adicionado uma sombra ao botão no hover para dar profundidade. */
+}
+
+/* Tela de fim do jogo */
+.fim {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Adicionado 'justify-content: center;' para centralizar o conteúdo verticalmente na tela final. */
+  gap: 20px;
+  /* Aumentado o gap para maior espaçamento entre os elementos da tela final. */
+  height: 100%;
+  /* Definido a altura como 100% para ocupar o espaço disponível e centralizar corretamente. */
+  text-align: center;
+  /* Centraliza o texto na tela final. */
+}
+
+.fim span {
+  margin-bottom: 1rem;
+  /* Ajustado a margem inferior. */
+  text-align: center;
+  font-weight: 700;
+  /* Aumentado o peso da fonte. */
+  color: white;
+  font-size: 1.8em;
+  /* Aumentado o tamanho da fonte para o texto final, tornando-o mais legível. */
+}
+
+.fim button {
+  padding: 10px 20px;
+  /* Adicionado padding para o botão de reiniciar. */
+  background-color: #ff1b7b;
+  /* Definido uma cor de fundo para o botão de reiniciar. */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+  /* Adicionado transição suave para o hover do botão. */
+}
+
+.fim button:hover {
+  background-color: #d11267;
+  /* Alterado a cor de fundo no hover para o botão de reiniciar. */
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+  .conteudo-jogo {
+    margin-top: 1rem;
+    padding: 15px;
+  }
+
+  .titulo h1 {
+    font-size: 2em;
+  }
+
+  .pergunta {
+    font-size: 1.1em;
+  }
+
+  .botao-resposta {
+    height: 2.8rem;
+    font-size: 1em;
+    padding: 8px;
+  }
+
+  .fim span {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .conteudo-jogo {
+    margin-top: 0.5rem;
+    padding: 10px;
+    min-height: 60vh;
+  }
+
+  .titulo h1 {
+    font-size: 1.8em;
+  }
+
+  .pergunta {
+    font-size: 1em;
+  }
+
+  .botao-resposta {
+    height: 2.5rem;
+    font-size: 0.9em;
+    padding: 6px;
+  }
+
+  .fim span {
+    font-size: 1.3em;
+  }
+}
