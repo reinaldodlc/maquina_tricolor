@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <!-- Adicionado a tag <html> com atributo lang para indicar o idioma, melhorando a acessibilidade. -->
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Definido o conjunto de caracteres para UTF-8. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Configurado a viewport para garantir responsividade em diferentes dispositivos. -->
+    <title>Máquina Tricolor</title>
+    <!-- Adicionado um título para a página, importante para SEO e identificação da aba do navegador. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- Link para pré-conexão com o Google Fonts, otimiza o carregamento da fonte. -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Link para pré-conexão com o Google Fonts, otimiza o carregamento da fonte. -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link para importar a fonte 'Gabarito' do Google Fonts. -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link para o arquivo CSS externo 'style.css', mantendo o HTML mais limpo e organizado. -->
+  </head>
+  <body>
+    <header>
+      <!-- Usado <header> para agrupar elementos de cabeçalho (logo e título), melhorando a semântica do documento. -->
+      <div class="logo">
+        <img
+          src="https://i.postimg.cc/GpCxYmvc/title.pn"
+          alt="Logo do Fluminense"
+        />
+        <!-- Adicionado um texto alternativo (alt) para a imagem, fundamental para acessibilidade e SEO. -->
+      </div>
+
+      <div class="titulo">
+        <h1>MÁQUINA TRICOLOR</h1>
+        <!-- Alterado <h2> para <h1>, pois o título principal da página deve ser um <h1> para melhor semântica e SEO. -->
+      </div>
+    </header>
+
+    <main class="conteudo-jogo">
+      <!-- Alterado <div> para <main>, indicando o conteúdo principal e único da página, melhorando a semântica. -->
+      <section class="questionario">
+        <!-- Mantida a tag <section> para agrupar o questionário. -->
+        <div class="conteudo">
+          <span class="progresso"></span>
+          <span class="pergunta"></span>
+          <div class="respostas"></div>
+        </div>
+
+        <div class="fim">
+          <span></span>
+          <button id="reiniciarJogo">Reiniciar Jogo</button>
+          <!-- Adicionado um botão com id="reiniciarJogo" para permitir que o usuário reinicie o quiz após a conclusão. -->
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+    <!-- Movido o link do JavaScript para antes do fechamento do </body>, o que garante que o HTML seja carregado antes do script tentar manipulá-lo, evitando erros. -->
+  </body>
+</html>
